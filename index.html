@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <h1 id="title">Survey Form</h1>
+
+    <p id="description">This is a survey website</p>
+
+    <form method="get" id="survey-form">
+      <fieldset>
+        <div>
+          <label id="name-label" for="name"> Name</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Enter your name"
+            name="name"
+            required
+          />
+        </div>
+
+        <div>
+          <label id="email-label" for="email"> Email </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <div>
+          <label id="number-label" for="number"> Age</label>
+          <input
+            name="age"
+            id="number"
+            type="number"
+            required
+            min="13"
+            max="120"
+            placeholder="Enter your age"
+          />
+        </div>
+      </fieldset>
+
+      <p>Which option best describes your current role?</p>
+
+      <select id="dropdown" name="currentRole" required>
+        <option disabled selected value="nil">Select current role</option>
+
+        <option value="Student">Student</option>
+
+        <option value="Job">Job</option>
+
+        <option value="Other">other</option>
+      </select>
+
+      <div class="re">
+        <p>Would you recommend freeCodeCamp to a friend?</p>
+        <p>
+          <label>
+            <input type="radio" value="yes" name="recommend" /> yes
+          </label>
+
+          <label> <input type="radio" value="no" name="recommend" /> no </label>
+
+          <label>
+            <input type="radio" value="maybe" name="recommend" /> maybe
+          </label>
+        </p>
+      </div>
+
+      <fieldset>
+        <p><label> What is your favorite feature of freeCodeCamp? </label></p>
+
+        <label
+          ><input
+            type="checkbox"
+            name="improve"
+            value="Front-end Projects"
+            checked
+          />Front-end Projects</label
+        >
+
+        <label
+          ><input
+            type="checkbox"
+            name="improve"
+            value="Back-end Projects"
+          />Back-end Projects</label
+        >
+
+        <label
+          ><input
+            type="checkbox"
+            name="improve"
+            value="Full-Stack-Projects"
+          />Full Stack Projects</label
+        >
+      </fieldset>
+
+      <fieldset>
+        <label for="txtarea"> Any feedback</label>
+        <textarea
+          id="txtarea"
+          required
+          name="feedback"
+          placeholder="Enter your feedback"
+          aria-required="true"
+        >
+        </textarea>
+      </fieldset>
+
+      <button id="submit" type="submit">submit</button>
+    </form>
+  </body>
+</html>
